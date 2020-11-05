@@ -14,9 +14,9 @@ h1{
 /******* Navigation Bar******/
 
 .navbar  {
-    position: absolute;
-    width: 41%;
-    margin-left: 47%;
+    position: relative;
+    width: 100%;
+    
     border-radius: 4px; 
 }  
 
@@ -35,8 +35,9 @@ h1{
 
 
 .shop, .nav-link:hover {
-    background-color: #e8e8e8;  
+    background-color: #3797a4;  
     border-radius: 4px;
+    
 }
 
 
@@ -149,7 +150,54 @@ h1{
 
 
 
-@media (max-width:800px){
+@media screen and (max-width:1500px){
+    .navbar  {
+        position: flex;
+        text-align: right;
+        width: 80%;
+        margin-left: 0;
+        border-radius: 4px; 
+    }  
+}
+
+@media screen and (max-width:991px){
+    .flowers-image {
+        position: relative;
+        width: 100%;    
+    }
+
+    .text h1 {
+        font-size: 1.8rem;
+    }
+    .text {
+        font-size: 1.2rem;
+        text-align: right;
+        display: block;
+        position: absolute;
+        top: 40%;
+    }  
+    .navbar {
+        display: flex;
+        z-index: 1;
+        width: 96%;
+        text-align: right;
+        padding: 0;
+        margin: 0;
+     }
+     .nav-item {
+        font-size: 0.9rem;
+    }
+    .nav-link {
+        padding: 4px;
+    }
+
+    .shop, .nav-link:hover{
+        background-color: transparent;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width:600px){
     .container-fluid{
         width: 100%;
         padding: 0;
@@ -206,26 +254,7 @@ h1{
         font-size: 0.8rem;
     }
 
-    .navbar {
-       display: flex;
-       z-index: 1;
-       width: 96%;
-       text-align: right;
-       padding: 0;
-       margin: 0;
-    }
-
-    .nav-item {
-        font-size: 0.9rem;
-    }
-    .nav-link {
-        padding: 4px;
-    }
-
-    .shop, .nav-link:hover{
-        background-color: transparent;
-        text-decoration: underline;
-    }
+  
 
     .caro-image{  
         width: 450px;
