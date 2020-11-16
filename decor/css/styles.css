@@ -1,12 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     font-family: 'Poppins', sans-serif;
     color: #28282c;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -139,6 +136,7 @@ h2 {
 
 .blog-card{
     width: 100%; 
+    margin: 0;
 }
 
 .card{
@@ -197,14 +195,22 @@ p{
     .img1{
         padding-top:80px;
     }
-   
-
 
     .card{
         margin: 7px 0; 
     }
     
-    #blog.section2{
+    #blog.section2 {
         padding: 0;
+    }
+    
+    .blog-card{
+        width: 100%; 
+    }
+
+    .caro-image{
+        width: 100%;
+        height: auto;
+        max-height: 276px;
     }
 }

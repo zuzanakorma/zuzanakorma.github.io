@@ -104,7 +104,7 @@
                     <div class="card">
                         <div class="card-header text-center">
                             <h5 class="mb-0">
-                                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                                <div class="port-item" href="#collapse1" data-toggle="collapse" data-parent="#accordion">
                                     <i class="fas fa-arrow-circle-down"></i> What Do We Do
                                 </div>
                             </h5>
@@ -120,7 +120,7 @@
                     <div class="card">
                         <div class="card-header text-center">
                             <h5 class="mb-0">
-                                <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                                <div class="port-item" href="#collapse2" data-toggle="collapse" data-parent="#accordion">
                                     <i class="fas fa-arrow-circle-down"></i> Our Stores
                                 </div>
                             </h5>
@@ -136,7 +136,7 @@
                     <div class="card">
                         <div class="card-header text-center">
                             <h5 class="mb-0">
-                                <div href="#collapse3" data-toggle="collapse" data-parent="#accordion">
+                                <div class="port-item" href="#collapse3" data-toggle="collapse" data-parent="#accordion">
                                     <i class="fas fa-arrow-circle-down"></i> Join Us
                                 </div>
                             </h5>
@@ -161,7 +161,7 @@
         <div>
             <h2>Blog</h2>
         </div>
-        <div class="container">
+        <div class="container px-0">
             <div class="row blog-card">
                 <div class="col-lg-4">
                     <div class="card">
@@ -327,15 +327,20 @@
         //get the current year for the copyright
         $('#year').text(new Date().getFullYear());
 
-        //Innit scrollspy
-    $('body').scrollspy({ target: '#main-nav' });
+        //collapse accordion
+        $('.port-item').click(function (){
+            $('.collapse').collapse('hide');
+        });
 
-    // Add smooth scrolling
-    $('#main-nav a').on('click', function (e) {
-    // Check for a hash value
-    if (this.hash !== '') {
-        // Prevent default behavior
-        e.preventDefault();
+        //Innit scrollspy
+        $('body').scrollspy({ target: '#main-nav' });
+
+        // Add smooth scrolling
+        $('#main-nav a').on('click', function (e) {
+        // Check for a hash value
+        if (this.hash !== '') {
+            // Prevent default behavior
+            e.preventDefault();
 
         // Store hash
         const hash = this.hash;
