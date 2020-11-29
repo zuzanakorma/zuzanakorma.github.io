@@ -84,7 +84,6 @@ h2 {
 
 .cta{
     padding: 30px 0 0 0;
-
 }
 .cta-select{
     border: 2px solid #e7305b;
@@ -94,7 +93,6 @@ h2 {
     cursor: pointer;
     font-size: 18px;
     border-radius: 15px;
-
 }
 .cta-select:hover{
     background: #e7305b;
@@ -111,8 +109,11 @@ h2 {
     border: none;
     margin: 15px;
     border-radius: 15px;
+    /* outline: none; */
 }
-
+.cta-add:focus, .cta-select:focus{
+    outline: none;
+}
 
 
 /********  About *******/
