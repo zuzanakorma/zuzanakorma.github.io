@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: lightgray;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+}
+h1 {
+  position: relative;
+  top: 1.5rem;
+  color: rgb(207, 71, 71);
+  text-shadow: 3px 3px darkgray;
+  font-size: 4rem;
+}
+h3 {
+  position: relative;
+  top: 1.5rem;
+}
+.grid {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  height: 450px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 10px darkgray;
+}
+
+.grid img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid darkgray;
+}
+
+#box {
+  width: 400px;
+  height: fit-content;
+  overflow: hidden;
+  background: darkgrey;
+  box-shadow: 0 0 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1000;
+  padding: 10px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.fa-check {
+  color: rgb(87, 207, 71);
+  display: block;
+  padding: 5px;
+}
+.box-heading {
+  color: rgb(87, 207, 71);
+  text-shadow: 3px 3px lightgray;
+  font-size: 3rem;
+  top: 0;
+}
+.close {
+  font-size: 20px;
+  padding: 10px, 20px;
+  cursor: pointer;
+  display: inline-block;
+  color: rgb(207, 71, 71);
+  outline: none;
+}
+.close:focus {
+  outline: none;
+}
+
+p.bottom {
+  position: absolute;
+  color: rgb(207, 71, 71);
+  text-shadow: 2px 2px darkgray;
+  font-size: 1rem;
+  bottom: 2rem;
+}
+
+@media screen and (max-width: 991px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .grid {
+    height: 300px;
+    width: 400px;
+  }
+  .grid img {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+  }
+  #box {
+    width: 300px;
+    height: fit-content;
+  }
+}
