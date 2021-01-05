@@ -55,7 +55,7 @@ h2 {
 }
 .img1 {
   position: relative;
-  margin-top: 10%;
+  margin-top: 10vh;
   width: 100%;
   z-index: 0;
 }
@@ -190,9 +190,9 @@ p {
     opacity: 1;
   }
 
-  .img1 {
-    margin-top: 12%;
-  }
+  /* .img1 {
+    margin-top: 10vh;
+  } */
 
   .card {
     margin: 7px 0;
