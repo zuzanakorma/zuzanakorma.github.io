@@ -613,8 +613,10 @@ input[name="r"] {
   .copyright-text {
     order: 1;
   }
+  .sm-list {
+    display: none;
+  }
 
-  .sm-link,
   .footer-sm-link {
     background-image: linear-gradient(to right, #971c31, #ff83d5);
     color: #ffdd93;
@@ -638,6 +640,9 @@ input[name="r"] {
     top: 1rem;
     width: 35rem;
   }
+  /* .sm-list {
+    display: none;
+  } */
 
   .content {
     grid-template-columns: 1fr;
