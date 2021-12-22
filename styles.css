@@ -39,6 +39,23 @@ h1 {
   color: var(--primary);
   z-index: 1000;
 }
+
+h3 {
+  color: var(--secondary);
+  font-family: var(--second-font);
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 6rem;
+  line-height: normal;
+  justify-content: center;
+  text-align: center;
+}
+p, ul {
+  font-size: 2rem;
+  font-weight: 200;
+  /* text-align: left; */
+}
+
 /*Utilities*/
 .container {
   max-width: 125rem;
@@ -130,6 +147,7 @@ header {
 
 .nav-link:hover {
   text-decoration: underline;
+  color: var(--primary);
 }
 
 /*Main content*/
@@ -160,6 +178,9 @@ header {
   background: linear-gradient(to top, #333333, transparent);
 }
 
+/***************** About Me section *****************/
+
+
 /***************** Project section *****************/
 
 .profile-content-wrapper h2 {
@@ -187,7 +208,7 @@ header {
 }
 
 .project-img {
-  min-width: 35rem;
+  min-width: 50rem;
   max-width: 50rem;
   height: 35rem;
   transform: translateX(-8rem);
