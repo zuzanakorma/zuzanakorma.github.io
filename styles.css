@@ -1,7 +1,7 @@
 /*Base*/
 :root {
-  --primary: #f3f2da;
-  --secondary: #5aecd8ec;
+  --primary: #4c4c47;
+  --secondary: #e96671fa;
 
   --main-font: "Poppins", sans-serif;
   --second-font: "Merriweather", serif;
@@ -20,9 +20,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: var(--main-font);
-  background-color: #333333;
+  background: linear-gradient(0deg,rgba(230,176,166,1)   0%, rgb(121, 199, 228) 100%);
   color: var(--primary);
-  /* background: linear-gradient(to right, black, var(--primary)); */
   z-index: -1;
 }
 
@@ -70,6 +69,7 @@ p, ul {
   /* text-align: left; */
 }
 
+
 /*Utilities*/
 .container {
   max-width: 100rem;
@@ -78,17 +78,35 @@ p, ul {
 }
 
 /*Header & Nav*/
+.logo-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .logo {
-  margin-top: 25px; 
+  margin-top: 40px;
+  margin-left: 0;
   display: block;
-  width: 8rem;
+  width: fit-content;
   color: var(--secondary);
   font-family: var(--second-font);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  text-align: left; 
+  text-align: left;
 }
+
+.sm-list{
+  width:auto;
+  display: flex;
+  flex-direction: row;
+  margin-right: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
 header {
   position: absolute;
   top: 0;
@@ -97,84 +115,28 @@ header {
   width: 100%;
 }
 
-.hamburger-menu {
-  position: fixed;
-  top: 25px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  background-color: transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  z-index: 999;
-}
-.hamburger-menu i {
-  font-size: 30px;
-  margin: auto;
-}
-
-.hamburger-menu .fa-times {
-  display: none;
-}
-.hamburger-menu .fa-times.open {
-  display: block;
-}
-.hamburger-menu .fa-bars.open {
-  display: none;
-}
 .nav-list {
-  position: fixed;
-  top: 0;
-  right: 0;
-  max-width: 200px;
-  width: 30%;
-  height: 100vh;
-  list-style: none;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 900;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transform: scale(0);
-  transition: opacity 650ms;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 40px;
 }
-.nav-list.open {
-  font-size: 1.5rem;
-  opacity: 1;
-  transform: scale(1);
-}
-.nav-item {
-  margin-top: 2rem;
-}
-.nav-link {
-  font-size: 2.3rem;
-  font-family: var(--second-font);
-  font-weight: 600;
-  text-align: center;
-  /* text-transform: uppercase; */
-
+.nav-item a{
   color: var(--secondary);
-  transition: all 0.3s;
+  font-size: 2.5rem;
 }
 
-.nav-link:hover {
-  text-decoration: underline;
-  color: var(--primary);
-}
 
 /*Main content*/
-.banner {
+.banner{
   width: 100%;
   min-height: 100vh;
   height: 100%;
-  background: url(images/notebook-1280538_1920.jpg) no-repeat;
+  background: url(images/backgroung-banner.jpg) ;
   background-size: cover;
-  opacity: 0.9;
+  opacity: 0.8;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -190,20 +152,66 @@ header {
   width: 100%;
   height: 200px;
   z-index: 1;
-  background: linear-gradient(to top, #333333, transparent);
+  background: linear-gradient(to top,  rgb(145, 193, 211) ,transparent);
+}
+
+.profile-banner{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.profile-banner-text{
+  width: 40%;
+  text-align: left;
+  font-size:1.7rem;
+  float: left;
+  padding: 1rem;
+}
+.profile-banner-image{
+  width: 60%;
+  float: left;
+  padding: 1rem 6rem ;
+}
+.profile-banner-image img{
+  width:50%;
+  border-radius: 3%;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%)
 }
 
 /***************** About Me section *****************/
 
 
 /***************** Project section *****************/
-
+.projects{
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0 auto;
+    text-align: left;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+  }
+.projects::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  background: linear-gradient(to top,  rgb(145, 193, 211)  ,transparent);
+}
 .profile-content-wrapper h2 {
   color: var(--secondary);
   font-family: var(--second-font);
   font-weight: 600;
   font-size: 3rem;
   margin: 6rem;
+  padding-top: 3rem;
   line-height: normal;
   justify-content: center;
   text-align: center;
@@ -214,10 +222,10 @@ header {
   width: 100%;
   max-width: 98rem;
   padding: 1rem;
-  background-color: var(--primary); 
-  box-shadow: 0.5rem 0.5rem 0.5rem var(--primary);
+  box-shadow: 0.2rem 0.2rem 0.2rem var(--primary);
   display: flex;
   align-items: center;
+  border: 1px solid var(--primary);
   border-radius: 0.8rem;
   margin: 0 auto;
 }
@@ -226,7 +234,7 @@ header {
   min-width: 40rem;
   max-width: 40rem;
   height: 25rem;
-  transform: translateX(-8rem);
+  transform: translateX(-6rem);
   position: relative;
 }
 .project-img img {
@@ -234,12 +242,12 @@ header {
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 0.8rem;
+  /* border-radius: 0.8rem; */
 }
 .project-title h3{
   color: #333333;
 }
-.project-text, span {
+.project-text{
   margin-bottom: 3rem;
   font-size: 1.4rem;
   color: #333333;
@@ -258,7 +266,7 @@ header {
   font-weight: bold;
 }
 .project-cta:hover {
-  background-color: #333333;
+  /* background-color: #333333; */
   color: var(--primary);
 }
 
@@ -274,17 +282,15 @@ header {
   width: 2.8rem;
   height: 2.8rem;
   color: #333333;
-  background-image: linear-gradient(to right, var(--secondary), var(--primary));
   display: flex;
-  margin-right: 1rem;
-  font-size: 1.8rem;
+  margin-right: 1.3rem;
+  font-size: 3rem;
 }
 .footer-sm-link i {
   margin: auto;
 }
 
 .footer-sm-link:hover {
-  background-image: linear-gradient(to left, var(--secondary), var(--primary));
   color: #333333;
   text-decoration: none;
 }
@@ -298,6 +304,16 @@ header {
   margin-bottom: 1rem;
   color: var(--primary);
 }
+
+.arrow {
+  width: 1.8rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  z-index: 999;
+  cursor: pointer;
+}
+
 
 /************************** Media  *****************/
 @media screen and (max-width: 1068px) {
@@ -320,6 +336,43 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .banner{
+    padding-top: 50%;
+  }
+  .banner h1{
+    font-size: 3rem;
+  }
+  .profile-banner{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .profile-banner-text{
+    width: 100%;
+    font-size:1.7rem;
+  }
+  .profile-banner-image{
+    width: 100%;
+  }
+  .profile-banner-image img{
+    width: 40%;
+    align-items: center;
+    opacity: 1;
+  }
+  .logo-flex{
+    flex-direction: column;
+  }
+  .sm-list{
+    display: none;
+  }
+  .nav-list {
+    margin-top: 0px;
+  }
+  .banner::before,
+  .projects::before {
+    visibility: hidden;
+  }
   .project-part {
     padding: 2.5rem;
     flex-direction: column;
@@ -329,4 +382,8 @@ header {
     max-width: 100%;
     transform: translateX(0);
   }
+  .project-title h3{
+    margin-top: 1rem;
+  }
 }
+
